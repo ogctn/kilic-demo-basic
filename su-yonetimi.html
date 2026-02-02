@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Su Yönetimi | Kılıç Enerji</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><i data-lucide="zap"></i> Kılıç Enerji</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="kurumsal.html">Kurumsal</a></li>
+                <li><a href="enys.html">ENYS Platformu</a></li>
+                <li><a href="karbon-yonetimi.html">Karbon</a></li>
+                <li><a href="su-yonetimi.html" class="active">Su</a></li>
+                <li><a href="iklim-kanunu.html">İklim</a></li>
+                <li><a href="esg-surdurulebilirlik.html">ESG</a></li>
+                <li><a href="referanslar.html">Referanslar</a></li>
+                <li><a href="iletisim.html" class="cta-btn">Bize Ulaşın</a></li>
+            </ul>
+            <div class="hamburger"><i data-lucide="menu"></i></div>
+        </div>
+    </header>
+
+    <div class="container" style="margin-top: 100px;">
+        <div class="hero" style="padding: 3rem 0;">
+            <span class="badge" style="background: var(--secondary);">ISO 14046</span>
+            <h1>Su Ayak İzi Yönetimi</h1>
+            <p>Su Verimliliği Yönetmeliği kapsamında riskleri yönetin, maliyetleri düşürün.</p>
+        </div>
+
+        <div class="card featured" style="margin-bottom: 2rem; border-left: 5px solid #ef4444;">
+            <h3 style="color: #ef4444;">⚠️ Kritik Riskler</h3>
+            <p>Türkiye'de artan su stresi ve yasal düzenlemeler, kurumlar için yeni riskler doğurmuştur:</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                <div><strong>1. İdari Para Cezaları:</strong><br><span style="font-size: 0.9rem; color: var(--text-muted);">Hedefleri tutturamayan kurumlara yaptırımlar.</span></div>
+                <div><strong>2. Tahsis Kısıtları:</strong><br><span style="font-size: 0.9rem; color: var(--text-muted);">Verimsiz kullanımda su kesintisi riski.</span></div>
+                <div><strong>3. Finansman Kaybı:</strong><br><span style="font-size: 0.9rem; color: var(--text-muted);">Yeşil uyum şartı sağlanamazsa kredi kaybı.</span></div>
+            </div>
+        </div>
+
+        <div class="services-grid">
+            <div class="card">
+                <h3>Teknik Çözümlerimiz</h3>
+                <ul style="list-style: none; margin-top: 1rem; color: var(--text-muted);">
+                    <li style="margin-bottom: 0.5rem;"><i data-lucide="check" style="width: 16px;"></i> Detaylı Su Etüdü ve Kaçak Tespiti</li>
+                    <li style="margin-bottom: 0.5rem;"><i data-lucide="check" style="width: 16px;"></i> Mavi, Yeşil ve Gri Su Ayak İzi Hesabı</li>
+                    <li style="margin-bottom: 0.5rem;"><i data-lucide="check" style="width: 16px;"></i> Bakanlık Raporlama Danışmanlığı</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Yasal Takvim</h3>
+                <p style="margin-top: 1rem;"><strong>30.06.2026:</strong> Kamu ve özel sektör işletmeleri için Su Verimliliği Raporlarının sisteme yüklenmesi için son tarih.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="theme-switcher">
+        <button class="theme-btn active" data-theme="default" style="background: #0284c7;"></button>
+        <button class="theme-btn" data-theme="theme-nature" style="background: #10b981;"></button>
+        <button class="theme-btn" data-theme="theme-corporate" style="background: #0f172a;"></button>
+    </div>
+    <script src="script.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

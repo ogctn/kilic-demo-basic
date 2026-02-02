@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurumsal | Kılıç Enerji</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><i data-lucide="zap"></i> Kılıç Enerji</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="kurumsal.html" class="active">Kurumsal</a></li>
+                <li><a href="enys.html">ENYS Platformu</a></li>
+                <li><a href="karbon-yonetimi.html">Karbon</a></li>
+                <li><a href="su-yonetimi.html">Su</a></li>
+                <li><a href="iklim-kanunu.html">İklim</a></li>
+                <li><a href="esg-surdurulebilirlik.html">ESG</a></li>
+                <li><a href="referanslar.html">Referanslar</a></li>
+                <li><a href="iletisim.html" class="cta-btn">Bize Ulaşın</a></li>
+            </ul>
+            <div class="hamburger"><i data-lucide="menu"></i></div>
+        </div>
+    </header>
+
+    <div class="container" style="margin-top: 100px;">
+        <div class="hero" style="padding: 4rem 0;">
+            <span class="badge">HAKKIMIZDA</span>
+            <h1>Enerji Dönüşümünün <br> <span style="color: var(--primary);">Stratejik Ortağı</span></h1>
+            <p>2019'dan beri enerji teknolojileri, sürdürülebilirlik ve dijital dönüşüm alanlarında kamu ve özel sektöre mühendislik çözümleri sunuyoruz.</p>
+        </div>
+
+        <div class="services-grid" style="grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+            <div class="card featured">
+                <h3>Vizyonumuz</h3>
+                <p>Türkiye'nin düşük karbonlu ve verimli enerji geleceğine geçişinde, dijital teknolojilerle güçlendirilmiş en güvenilir stratejik çözüm ortağı olmak.</p>
+            </div>
+            <div class="card">
+                <h3>Misyonumuz</h3>
+                <p>İklim değişikliği ile mücadelede, kurumların karbon ayak izini azaltmalarını ve enerji verimliliğini artırmalarını sağlayan ölçülebilir, denetlenebilir ve sürdürülebilir projeler geliştirmek.</p>
+            </div>
+        </div>
+
+        <div class="card" style="margin-top: 3rem;">
+            <h3>Değerlerimiz</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="check-circle" style="color: var(--secondary);"></i> Şeffaflık</div>
+                <div style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="check-circle" style="color: var(--secondary);"></i> Yenilikçilik</div>
+                <div style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="check-circle" style="color: var(--secondary);"></i> Sürdürülebilirlik</div>
+                <div style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="check-circle" style="color: var(--secondary);"></i> Güvenilirlik</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="theme-switcher">
+        <button class="theme-btn active" data-theme="default" style="background: #0284c7;"></button>
+        <button class="theme-btn" data-theme="theme-nature" style="background: #10b981;"></button>
+        <button class="theme-btn" data-theme="theme-corporate" style="background: #0f172a;"></button>
+    </div>
+
+    <script src="script.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

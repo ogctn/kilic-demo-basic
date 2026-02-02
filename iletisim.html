@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim | Kılıç Enerji</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><i data-lucide="zap"></i> Kılıç Enerji</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="kurumsal.html">Kurumsal</a></li>
+                <li><a href="enys.html">ENYS Platformu</a></li>
+                <li><a href="karbon-yonetimi.html">Karbon</a></li>
+                <li><a href="su-yonetimi.html">Su</a></li>
+                <li><a href="iklim-kanunu.html">İklim</a></li>
+                <li><a href="esg-surdurulebilirlik.html">ESG</a></li>
+                <li><a href="referanslar.html">Referanslar</a></li>
+                <li><a href="iletisim.html" class="active cta-btn">Bize Ulaşın</a></li>
+            </ul>
+            <div class="hamburger"><i data-lucide="menu"></i></div>
+        </div>
+    </header>
+
+    <div class="container" style="margin-top: 100px;">
+        <div class="hero" style="padding: 3rem 0;">
+            <h1>Bize Ulaşın</h1>
+            <p>Projeleriniz ve danışmanlık talepleriniz için yanınızdayız.</p>
+        </div>
+
+        <div class="services-grid" style="grid-template-columns: 1fr 1.5fr;">
+            <div class="card">
+                <h3>Merkez Ofis</h3>
+                <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1.5rem;">
+                    <div style="display: flex; gap: 1rem;">
+                        <i data-lucide="map-pin" style="color: var(--primary);"></i>
+                        <span>Mustafa Kemal Mah. 2141 Cad.<br>Fazlıoğlu Apt. No: 32/8<br>Çankaya / ANKARA</span>
+                    </div>
+                    <div style="display: flex; gap: 1rem;">
+                        <i data-lucide="mail" style="color: var(--primary);"></i>
+                        <span>info@kilicenerji.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Mesaj Gönderin</h3>
+                <form style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem;">
+                    <input type="text" placeholder="Adınız Soyadınız" style="padding: 1rem; border-radius: 8px; border: 1px solid #cbd5e1; background: rgba(255,255,255,0.8);">
+                    <input type="email" placeholder="E-posta Adresiniz" style="padding: 1rem; border-radius: 8px; border: 1px solid #cbd5e1; background: rgba(255,255,255,0.8);">
+                    <textarea rows="4" placeholder="Mesajınız" style="padding: 1rem; border-radius: 8px; border: 1px solid #cbd5e1; background: rgba(255,255,255,0.8);"></textarea>
+                    <button type="submit" class="btn" style="border: none; cursor: pointer; width: fit-content;">Gönder</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="theme-switcher">
+        <button class="theme-btn active" data-theme="default" style="background: #0284c7;"></button>
+        <button class="theme-btn" data-theme="theme-nature" style="background: #10b981;"></button>
+        <button class="theme-btn" data-theme="theme-corporate" style="background: #0f172a;"></button>
+    </div>
+
+    <script src="script.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

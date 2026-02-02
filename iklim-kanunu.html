@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İklim Kanunu | Kılıç Enerji</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><i data-lucide="zap"></i> Kılıç Enerji</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="kurumsal.html">Kurumsal</a></li>
+                <li><a href="enys.html">ENYS Platformu</a></li>
+                <li><a href="karbon-yonetimi.html">Karbon</a></li>
+                <li><a href="su-yonetimi.html">Su</a></li>
+                <li><a href="iklim-kanunu.html" class="active">İklim</a></li>
+                <li><a href="esg-surdurulebilirlik.html">ESG</a></li>
+                <li><a href="referanslar.html">Referanslar</a></li>
+                <li><a href="iletisim.html" class="cta-btn">Bize Ulaşın</a></li>
+            </ul>
+            <div class="hamburger"><i data-lucide="menu"></i></div>
+        </div>
+    </header>
+
+    <div class="container" style="margin-top: 100px;">
+        <div class="hero" style="padding: 3rem 0;">
+            <h1>7552 Sayılı İklim Kanunu</h1>
+            <p>Kamu kurumları ve özel sektör için yasal uyum rehberi, YİDEP süreçleri ve idari sorumluluklar.</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="card featured">
+                <span class="badge">ZORUNLULUK</span>
+                <h3>YİDEP Hazırlığı</h3>
+                <p>Yerel İklim Değişikliği Eylem Planı (YİDEP), tüm yerel yönetimlerin hazırlaması zorunlu stratejik plandır.</p>
+            </div>
+            <div class="card">
+                <h3>Enerji Verimliliği Hedefleri</h3>
+                <p>Cumhurbaşkanlığı genelgeleri doğrultusunda 2030 yılına kadar %30 enerji verimliliği sağlanması zorunludur.</p>
+            </div>
+        </div>
+
+        <div class="card" style="margin-top: 3rem;">
+            <h3>İdari Sorumluluklar</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1rem;">
+                <div>
+                    <h4 style="color: var(--primary);">Valiliklerin Rolü</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">5442 Sayılı İl İdaresi Kanunu uyarınca çevre ve enerji yönetiminde nihai idari sorumluluk Valilik makamındadır.</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--primary);">Hukuk Birimlerinin Rolü</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">İdari ve mali yaptırımların takibi, yeşil şartname kontrolü hukuk birimlerinin sorumluluğundadır.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="theme-switcher">
+        <button class="theme-btn active" data-theme="default" style="background: #0284c7;"></button>
+        <button class="theme-btn" data-theme="theme-nature" style="background: #10b981;"></button>
+        <button class="theme-btn" data-theme="theme-corporate" style="background: #0f172a;"></button>
+    </div>
+    <script src="script.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

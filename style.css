@@ -1,0 +1,201 @@
+/* --- TEMA MOTORU VE GELİŞMİŞ RENKLER --- */
+:root {
+    /* RGB Değerleri (Saydamlık ayarları için gerekli) */
+    --primary-rgb: 2, 132, 199;     /* Gökyüzü Mavisi */
+    --secondary-rgb: 16, 185, 129;  /* Canlı Yeşil */
+    
+    /* Varsayılan Renkler */
+    --text-main: #0f172a;
+    --text-muted: #475569;
+    --primary: rgb(var(--primary-rgb));
+    --secondary: rgb(var(--secondary-rgb));
+    
+    /* Cam Efekti (Glassmorphism) Değişkenleri */
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.5);
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+}
+
+/* Koyu Tema Ayarları */
+body.theme-corporate {
+    --text-main: #f8fafc;
+    --text-muted: #cbd5e1;
+    --glass-bg: rgba(15, 23, 42, 0.6); /* Koyu cam */
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --primary: #38bdf8;
+}
+
+body.theme-nature {
+    --primary-rgb: 21, 128, 61;
+    --primary: rgb(var(--primary-rgb));
+    --glass-bg: rgba(255, 253, 240, 0.8);
+}
+
+/* --- GENEL AYARLAR --- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: var(--text-main);
+    line-height: 1.6;
+    min-height: 100vh;
+    transition: all 0.5s ease;
+
+    /* --- GELİŞMİŞ ARKA PLAN: ENERJİ DALGALARI --- */
+    background-color: #f0f9ff;
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(var(--primary-rgb), 0.3) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(var(--secondary-rgb), 0.3) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(var(--primary-rgb), 0.3) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(var(--secondary-rgb), 0.3) 0px, transparent 50%);
+    background-size: 150% 150%;
+    animation: gradientWave 15s ease infinite alternate;
+    background-attachment: fixed;
+}
+
+@keyframes gradientWave {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Header (Buzlu Cam) */
+header {
+    position: fixed; top: 0; width: 100%; z-index: 1000;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.navbar {
+    max-width: 1400px; margin: 0 auto; padding: 1rem;
+    display: flex; justify-content: space-between; align-items: center;
+}
+
+.logo { 
+    font-size: 1.5rem; font-weight: 800; color: var(--primary); 
+    display: flex; align-items: center; gap: 0.5rem; 
+    text-shadow: 0 0 20px rgba(var(--primary-rgb), 0.3);
+}
+
+.nav-links { display: flex; gap: 1.5rem; align-items: center; }
+.nav-links a { 
+    font-weight: 600; color: var(--text-main); position: relative;
+    padding: 5px 0; text-decoration: none; font-size: 0.95rem;
+}
+
+.nav-links a::after {
+    content: ''; position: absolute; width: 0; height: 2px;
+    bottom: 0; left: 0; background-color: var(--primary);
+    transition: width 0.3s;
+}
+.nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+
+.nav-links .cta-btn {
+    background: var(--primary); color: white; padding: 0.6rem 1.2rem;
+    border-radius: 50px; box-shadow: 0 4px 15px rgba(var(--primary-rgb), 0.4);
+    transition: 0.3s;
+}
+.nav-links .cta-btn:hover { 
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 20px rgba(var(--primary-rgb), 0.6);
+}
+.nav-links .cta-btn::after { display: none; } 
+
+/* Hamburger Menü */
+.hamburger { display: none; cursor: pointer; color: var(--text-main); }
+@media (max-width: 1024px) {
+    .nav-links {
+        position: fixed; top: 70px; right: -100%; width: 100%; height: 100vh;
+        background: var(--glass-bg); backdrop-filter: blur(20px);
+        flex-direction: column; align-items: center; justify-content: center;
+        transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); gap: 2rem;
+    }
+    .nav-links.active { right: 0; }
+    .hamburger { display: block; }
+}
+
+/* Ortak Alanlar */
+.container { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+
+/* Hero Alanı */
+.hero {
+    padding: 10rem 1rem 6rem; text-align: center;
+    position: relative; overflow: hidden;
+}
+.hero h1 { 
+    font-size: 3.5rem; margin-bottom: 1.5rem; line-height: 1.1; 
+    background: linear-gradient(135deg, var(--text-main) 30%, var(--primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.hero p { font-size: 1.25rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 2.5rem; }
+
+/* Kartlar */
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+
+.card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px; padding: 2.5rem;
+    box-shadow: var(--glass-shadow); transition: all 0.4s ease;
+    position: relative; overflow: hidden;
+}
+.card:hover { 
+    transform: translateY(-10px); 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    border-color: rgba(var(--primary-rgb), 0.3);
+}
+
+.icon-box {
+    width: 60px; height: 60px; 
+    background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.1), rgba(var(--secondary-rgb), 0.1));
+    border-radius: 15px; display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1.5rem; color: var(--primary); font-size: 1.5rem;
+}
+
+.card h3 { font-size: 1.4rem; margin-bottom: 0.8rem; color: var(--text-main); }
+.card p { color: var(--text-muted); }
+
+/* Özel Etiketler */
+.badge {
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    color: white; padding: 0.3rem 1rem; border-radius: 20px;
+    font-size: 0.75rem; font-weight: 800; letter-spacing: 1px;
+    margin-bottom: 1.2rem; display: inline-block;
+}
+.card.featured {
+    border: 2px solid rgba(var(--primary-rgb), 0.5);
+    background: linear-gradient(145deg, var(--glass-bg), rgba(var(--primary-rgb), 0.05));
+}
+
+/* Butonlar */
+.btn {
+    display: inline-block; padding: 1rem 2rem; border-radius: 50px;
+    background: var(--primary); color: white; font-weight: bold; text-decoration: none;
+    transition: 0.3s;
+}
+.btn:hover { background: var(--secondary); transform: translateY(-2px); }
+
+/* Tema Değiştirici */
+.theme-switcher {
+    position: fixed; bottom: 30px; right: 30px;
+    background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px);
+    padding: 10px; border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15); z-index: 2000;
+    display: flex; gap: 10px; border: 1px solid white;
+}
+.theme-btn {
+    width: 30px; height: 30px; border-radius: 50%; border: none; cursor: pointer;
+    transition: transform 0.2s;
+}
+.theme-btn:hover { transform: scale(1.1); }
+.theme-btn.active { transform: scale(1.2); box-shadow: 0 0 0 2px var(--text-main); }
+
+/* Footer */
+footer { 
+    background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px);
+    color: white; padding: 4rem 1rem 1rem; margin-top: 6rem; 
+}

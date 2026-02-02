@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karbon Yönetimi | Kılıç Enerji</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><i data-lucide="zap"></i> Kılıç Enerji</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="kurumsal.html">Kurumsal</a></li>
+                <li><a href="enys.html">ENYS Platformu</a></li>
+                <li><a href="karbon-yonetimi.html" class="active">Karbon</a></li>
+                <li><a href="su-yonetimi.html">Su</a></li>
+                <li><a href="iklim-kanunu.html">İklim</a></li>
+                <li><a href="esg-surdurulebilirlik.html">ESG</a></li>
+                <li><a href="referanslar.html">Referanslar</a></li>
+                <li><a href="iletisim.html" class="cta-btn">Bize Ulaşın</a></li>
+            </ul>
+            <div class="hamburger"><i data-lucide="menu"></i></div>
+        </div>
+    </header>
+
+    <div class="container" style="margin-top: 100px;">
+        <div class="hero" style="padding: 3rem 0;">
+            <span class="badge">ISO 14064</span>
+            <h1>Kurumsal Karbon Ayak İzi</h1>
+            <p>Uluslararası standartlara uygun ölçüm, raporlama ve azaltım stratejileri.</p>
+        </div>
+
+        <div class="services-grid" style="grid-template-columns: 1fr 1fr;">
+            <div class="card">
+                <h3>Kapsam ve Standartlar</h3>
+                <ul style="list-style: none; margin-top: 1rem; color: var(--text-muted);">
+                    <li style="margin-bottom: 0.5rem;">✅ <strong>Scope 1:</strong> Doğrudan emisyonlar (araçlar, kazanlar).</li>
+                    <li style="margin-bottom: 0.5rem;">✅ <strong>Scope 2:</strong> Satın alınan enerji kaynaklı emisyonlar.</li>
+                    <li style="margin-bottom: 0.5rem;">✅ <strong>Scope 3:</strong> Tedarik zinciri ve dolaylı emisyonlar.</li>
+                </ul>
+            </div>
+            <div class="card featured">
+                <h3>Neden Ölçmelisiniz?</h3>
+                <p>Sınırda Karbon Düzenlemesi (SKDM) ve İklim Kanunu gereği, karbon emisyonlarının raporlanması ticari bir zorunluluktur.</p>
+            </div>
+        </div>
+
+        <div class="card" style="margin-top: 2rem;">
+            <h3>Uygulama Yol Haritası</h3>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+                <div style="flex: 1; min-width: 200px; text-align: center;">
+                    <i data-lucide="map" style="color: var(--primary); margin-bottom: 0.5rem;"></i>
+                    <p><strong>1. Sınırların Belirlenmesi</strong></p>
+                </div>
+                <div style="flex: 1; min-width: 200px; text-align: center;">
+                    <i data-lucide="database" style="color: var(--primary); margin-bottom: 0.5rem;"></i>
+                    <p><strong>2. Veri Toplama</strong></p>
+                </div>
+                <div style="flex: 1; min-width: 200px; text-align: center;">
+                    <i data-lucide="calculator" style="color: var(--primary); margin-bottom: 0.5rem;"></i>
+                    <p><strong>3. Hesaplama (CO2e)</strong></p>
+                </div>
+                <div style="flex: 1; min-width: 200px; text-align: center;">
+                    <i data-lucide="file-check" style="color: var(--primary); margin-bottom: 0.5rem;"></i>
+                    <p><strong>4. Raporlama</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="theme-switcher">
+        <button class="theme-btn active" data-theme="default" style="background: #0284c7;"></button>
+        <button class="theme-btn" data-theme="theme-nature" style="background: #10b981;"></button>
+        <button class="theme-btn" data-theme="theme-corporate" style="background: #0f172a;"></button>
+    </div>
+    <script src="script.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
